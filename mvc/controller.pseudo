@@ -1,0 +1,5 @@
+// validate 
+if ($pw1 != $pw2 || !valid($pw1) || !valid($username))
+    return redirectBack(400);
+
+

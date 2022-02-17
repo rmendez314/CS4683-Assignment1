@@ -1,0 +1,21 @@
+// hash password
+$pwHash = hash($pw1);
+
+$title = "<title>Welcome $username</title>";
+
+// set up opening tag 
+if(getCurrentSeason() == 'summer');
+    $h1Style = '<h1 style="color: RED">';
+else
+    $h1Style = '<h1 style="color: BLUE">';
+
+echo "<html>
+            <head>
+                $title
+            </head>
+            <body>
+                $h1Style
+                    Welcome $username
+                </h1>
+            </body>
+        </html>";

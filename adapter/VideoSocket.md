@@ -8,8 +8,8 @@ public class VideoSocket {
 	public main(){
 		// plug MUST be of type VideoPlug
 		VideoPlug plug = new VGAPlug();
-
-		// call plug.display() 
+		
+		// call plug.display()
 		plug.display(1024, 768);
 
 		// use plug in a method which only takes objects
@@ -17,4 +17,4 @@ public class VideoSocket {
 		// This line MUST be run on the plug
 		someOtherClass.plugDiagnostic(plug);
 	}
-}	
+}

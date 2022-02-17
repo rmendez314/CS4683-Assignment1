@@ -1,0 +1,15 @@
+// initialize database
+$db = getDatabase('myHost', 'mypassword', 'myDb');
+$table = "users";
+
+// get registration information from the user
+$username = $_POST['username'];
+$pw1 = $_POST['password1'];
+$pw2 = $_POST['password2'];
+
+// create user
+$success = $db->query("INSERT INTO $table (username, password) 
+    VALUES ($username, $pwHash);");
+
+if(!$success)
+    return redirectBack(500);
