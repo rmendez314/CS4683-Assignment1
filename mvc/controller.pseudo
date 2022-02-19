@@ -1,5 +1,31 @@
-// validate 
-if ($pw1 != $pw2 || !valid($pw1) || !valid($username))
-    return redirectBack(400);
+/** CHANGE: **/
+import view.pseudo;
+import model.pseudo;
+
+if(isset($_POST['username])){
+
+    // get registration information from the user
+    $username = $_POST['username'];
+    $pw1 = $_POST['password1'];
+    $pw2 = $_POST['password2'];
+
+    // validate 
+    if ($pw1 != $pw2 || !valid($pw1) || !valid($username)){
+        return redirectBack(400);
+    } else { 
+        redirectModel();
+    }
+    // TODO: might need to fix this
+    if(!success){
+        redirectBack();
+    } else { 
+        redirectView(store session);
+    }
+
+} else { 
+    redirectView();
+
+}
+
 
 

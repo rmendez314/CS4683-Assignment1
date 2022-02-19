@@ -1,11 +1,11 @@
+import controller.pseudo
+
 // initialize database
 $db = getDatabase('myHost', 'mypassword', 'myDb');
 $table = "users";
 
-// get registration information from the user
-$username = $_POST['username'];
-$pw1 = $_POST['password1'];
-$pw2 = $_POST['password2'];
+// hash password
+$pwHash = hash($pw1);
 
 // create user
 $success = $db->query("INSERT INTO $table (username, password) 

@@ -1,0 +1,15 @@
+
+/** CHANGE: I created a new adapter class to handle the VideoPlug resolution to HDMI resolution **/
+
+    /** CHANGE: created a new HDMIPlug object to grab the HDMI height and width of display to translate */
+    private HDMIPlug hdmi = new HDMIPlug();
+
+    public Adapter(){}
+
+    /** CHANGE: handles the display conversion **/
+    public display(w,h){
+        hdmi.width= w;
+        hdmi.height = h;
+        hdmi.digitalDisplay();
+    }
+}
